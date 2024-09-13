@@ -1,0 +1,231 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.app-container {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  height: 100vh;
+}
+
+.sidebar h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  background-color: #34495e;
+}
+
+.content-container {
+  padding: 20px;
+  flex: 1;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+}
+
+.stat {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Background styling for the login pages */
+.login-page {
+  background-image: url('/src/resources/images/login.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the login box */
+.login-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 600px;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+/* Heading styles */
+.login-box h1, .login-box h2 {
+  text-align: center;
+  color: #333;
+}
+
+.login-box h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/* Input field styles */
+.login-box input[type="text"], .login-box input[type="password"] {
+  border: none;
+  background-color: #f4f4f4;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Submit button styles */
+.login-box input[type="submit"] {
+  background-color: #c0392b;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+}
+
+/* Links styling */
+.login-box .links {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+.login-box .links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.header {
+  background-color: #ffc107;
+  color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header p {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.popular-dishes h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.dishes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.dish {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  width: calc(25% - 20px);
+  height: 450px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background-color: #e74c3c;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.dish-image {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.dish h4 {
+  font-size: 18px;
+}
+
+.dish-price {
+  font-size: 16px;
+  color: #e74c3c;
+}
+
+.quantity-input {
+  width: 60px;
+  padding: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.add-to-cart-btn {
+  background-color: #c0392b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
