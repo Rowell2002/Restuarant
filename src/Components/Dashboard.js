@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css'; // Import the CSS file
+import '../App.css';
 import beef from '../resources/images/beef-burger.jpg';
 import chicken from '../resources/images/chicken-burger.jpg';
 import teriyaki from '../resources/images/chicken-teriyaki.jpg';

@@ -4,7 +4,7 @@ const Cart = ({ cart }) => {
   const calculateTotal = () => {
     return cart.reduce((total, item) => total + parseFloat(item.price.slice(1)) * item.quantity, 0).toFixed(2);
   };
-//hcbchgffcfc
+
   return (
     <div className="cart">
       <h2>Your Cart</h2>
