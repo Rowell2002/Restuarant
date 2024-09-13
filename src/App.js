@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
+
+// Import components
 import Cart from './Components/Cart';
 import Dashboard from './Components/Dashboard';
 import Login from './Components/Login';
 import Menu from './Components/Menu';
 import Orders from './Components/Orders';
+import PaymentPage from './Components/PaymentPage';
 import Reservations from './Components/Reservations';
 import Sidebar from './Components/Sidebar';
+import ThankYouPage from './Components/ThankYouPage';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -40,18 +45,25 @@ const App = () => {
         return <Reservations />;
       case 'foodOrder':
         return <Cart cart={cart} />;
+      case 'payment':
+        return <PaymentPage />;
       default:
         return <Dashboard addToCart={addToCart} cart={cart} />;
     }
   };
 
   return (
-    <div className="app-container">
-      {isLoggedIn && <Sidebar activePage={activePage} setActivePage={setActivePage} />}
-      <div className="content-container">
-        {renderContent()}
+    <Router>
+      <div className="app-container">
+        {isLoggedIn && <Sidebar activePage={activePage} setActivePage={setActivePage} />}
+        <div className="content-container">
+          <Routes>
+            <Route path="/" element={renderContent()} />
+            <Route path="/thank-you" element={<ThankYouPage />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 };
 
